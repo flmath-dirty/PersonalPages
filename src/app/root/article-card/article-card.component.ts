@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleCard } from './article-card';
 
 @Component({
   selector: 'app-article-card',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ArticleCardComponent implements OnInit {
 
   constructor() { }
-
+  articleCard = ArticleCard;
   ngOnInit() {
   }
 
