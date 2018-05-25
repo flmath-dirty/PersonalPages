@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ArticleCard } from './article-card';
 
 @Component({
@@ -7,9 +7,10 @@ import { ArticleCard } from './article-card';
   styleUrls: ['./article-card.component.css']
 })
 export class ArticleCardComponent implements OnInit {
-
-  constructor() { }
+  @Input()
   articleCard = ArticleCard;
+  constructor() { }
+  
   ngOnInit() {
   }
 

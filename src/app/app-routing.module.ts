@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArticlesListComponent } from './root/articles-list/articles-list.component';
 import { ResumeComponent } from './root/resume/resume.component';
 
+
 const appRoutes: Routes = [
     { path: 'articles', component: ArticlesListComponent },
     { path: 'resume', component: ResumeComponent },
@@ -18,5 +19,6 @@ const appRoutes: Routes = [
         RouterModule    
     ]
 })
+
 
 export class AppRoutingModule { }
