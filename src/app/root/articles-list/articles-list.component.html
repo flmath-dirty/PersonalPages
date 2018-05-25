@@ -1,3 +1,7 @@
-<p>
-  articles-list works!
-</p>
+<mat-list>
+  <mat-list-item *ngFor="let articleCard of articleCards">
+    
+    <p mat-line>{{articleCard.name}}</p>
+    <p mat-line>Tags: {{articleCard.tags}}</p>    
+  </mat-list-item>
+</mat-list>

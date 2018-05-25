@@ -21,5 +21,4 @@ articleCards: ArticleCard[];
   ngOnInit() {
   this.getArticles();
   }
-
 }
