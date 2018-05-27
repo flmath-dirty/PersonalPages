@@ -11,15 +11,18 @@ export class ArticlesFilterPipe implements PipeTransform {
 	if(!articles) return [];
 	if(!pattern) return articles;
 	let regexp = new RegExp(pattern.toLowerCase());
-	let isRegexMatch = isRegexMatchFun(regexp);
+	let isRegexMatch = this.isRegexMatchFun(regexp);
 	return articles.filter(isRegexMatch);
 
     }
-    function isRegexMatchFun(regexp){
+    
+    isRegexMatchFun(regexp : any): any{
 	return function(article, index, array) {
 	    // console.log(article.name);
 	    // console.log(regexp.test(article.name.toLowerCase()));
-	    return regexp.test(article.name.toLowerCase());
+	    let isRegexpInName: boolean = regexp.test(article.name.toLowerCase());
+	    let isRegexpInTags: boolean = regexp.test(article.tags.toLowerCase());
+	    return (isRegexpInName || isRegexpInTags);
 	} 
 	
     }
