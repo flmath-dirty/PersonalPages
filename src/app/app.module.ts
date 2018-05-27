@@ -13,6 +13,7 @@ import { MainMenuComponent } from './root/main-menu/main-menu.component';
 import { ArticlesListComponent } from './root/articles-list/articles-list.component';
 import { ArticleCardComponent } from './root/article-card/article-card.component';
 import { ResumeComponent } from './root/resume/resume.component';
+import { ArticlesFilterPipe } from './root/articles-list/articles-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResumeComponent } from './root/resume/resume.component';
     MainMenuComponent,
     ArticlesListComponent,
     ArticleCardComponent,
-    ResumeComponent
+    ResumeComponent,
+    ArticlesFilterPipe
   ],
   imports: [
     BrowserModule,

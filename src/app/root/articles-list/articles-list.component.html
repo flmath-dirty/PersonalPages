@@ -1,7 +1,17 @@
-<mat-list>
-  <mat-list-item *ngFor="let articleCard of articleCards">
-    
-    <p mat-line>{{articleCard.name}}</p>
-    <p mat-line>Tags: {{articleCard.tags}}</p>    
-  </mat-list-item>
-</mat-list>
+<mat-form-field class="articles-filter">
+  <input matInput placeholder="Find article" #box (keyup.enter)="onEnter(box.value)">
+  <button mat-button  (click)="onEnter(box.value)"> Filter </button>
+</mat-form-field>
+<mat-accordion class="article-cards-align">
+  <mat-expansion-panel *ngFor="let articleCard of (articleCards | articlesFilter:filterRegex)">
+    <mat-expansion-panel-header>
+      {{articleCard.name}}
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Tags: {{articleCard.tags}} 
+    </mat-panel-description>
+    <mat-action-row>
+      <button mat-button>Go to article</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

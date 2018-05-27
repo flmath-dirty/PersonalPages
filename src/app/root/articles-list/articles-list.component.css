@@ -1,0 +1,26 @@
+.article-cards-align .mat-action-row{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-cards-align .mat-action-row .mat-button{
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles-filter{
+    justify-content: space-between;
+    
+    align-items: center;
+    margin-left: 2%;
+    width: 96%;
+}
+.articles-filter .matInput{
+    width: 100%;
+}
+
+.articles-filter .mat-button{
+    width: 100%;
+}
